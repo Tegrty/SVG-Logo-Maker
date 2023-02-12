@@ -50,17 +50,17 @@ inquirer.prompt([
 
     if (response.shape === 'Triangle') {
         const triangle = new Triangle(response.text, response.textColor, response.backgroundColor);
-        fs.writeFile('logo.svg', triangle.render(), (err) =>
+        fs.writeFile('examples/logo.svg', triangle.render(), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     } else if (response.shape === 'Square') {
         const square = new Square(response.text, response.textColor, response.backgroundColor);
-        fs.writeFile('logo.svg', square.render(), (err) =>
+        fs.writeFile('examples/logo.svg', square.render(), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     } else if (response.shape === 'Circle') {
         const circle = new Circle(response.text, response.textColor, response.backgroundColor);
-        fs.writeFile('logo.svg', circle.render(), (err) =>
+        fs.writeFile('examples/logo.svg', circle.render(), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     }

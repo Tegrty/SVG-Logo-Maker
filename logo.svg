@@ -1,6 +1,0 @@
-
-            <svg height="200" width="300">
-                <polygon points="150,10 295,200 5,200" style="fill:red;"/>
-                <text x="125" y="100" fill="yellow">123</text>
-            </svg>
-        
