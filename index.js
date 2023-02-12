@@ -9,15 +9,19 @@ const Circle = require('./lib/shapes/circle');
 // Array of questions for user input
 
 inquirer.prompt([
-    {
-        type: 'input',
-        message: 'What is the name of your project?',
-        name: 'title',
-    },
+
     {
         type: 'input',
         message: 'Enter up to 3 characters for your logo',
         name: 'text',
+
+        validate: (text) => {
+            if (text.length < 4) {
+                return true;
+            } else {
+                return 'Text must be less than 4 characters';
+            }
+        },
     },
     {
         type: 'input',
@@ -46,17 +50,17 @@ inquirer.prompt([
 
     if (response.shape === 'Triangle') {
         const triangle = new Triangle(response.text, response.textColor, response.backgroundColor);
-        fs.writeFile('index.html', triangle.render(), (err) =>
+        fs.writeFile('logo.svg', triangle.render(), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     } else if (response.shape === 'Square') {
         const square = new Square(response.text, response.textColor, response.backgroundColor);
-        fs.writeFile('index.html', square.render(), (err) =>
+        fs.writeFile('logo.svg', square.render(), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     } else if (response.shape === 'Circle') {
         const circle = new Circle(response.text, response.textColor, response.backgroundColor);
-        fs.writeFile('index.html', circle.render(), (err) =>
+        fs.writeFile('logo.svg', circle.render(), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     }
