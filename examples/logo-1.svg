@@ -1,0 +1,6 @@
+
+            <svg height="200" width="300">
+                <rect width="200" height="200" style="fill:yellow;"/>
+                <text x="125" y="100" fill="purple">CBA</text>
+            </svg>
+        
