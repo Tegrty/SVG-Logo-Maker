@@ -12,6 +12,8 @@
 4. Complete the prompts to customize your logo
 5. Navigate to the Examples folder to retrieve your logo
 
+[Video](https://drive.google.com/file/d/1Tgosa9UcLr3OJcxRtCCWrzLjKxTwl-XG/view?usp=share_link) instructions
+
 **Prerequisite Applications:** 
 
 * Node.js
